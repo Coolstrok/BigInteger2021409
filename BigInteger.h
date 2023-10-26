@@ -1,3 +1,6 @@
+#ifndef BIGINTEGER_H
+#define BIGINTEGER_H
+
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -22,3 +25,5 @@ int length(struct node *);
 struct BigInteger mul(struct BigInteger , struct BigInteger );
 int zero(struct BigInteger ,struct node *);
 struct BigInteger div1(struct BigInteger ,struct BigInteger );
+
+#endif
