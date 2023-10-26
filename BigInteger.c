@@ -25,7 +25,7 @@ struct BigInteger initialize(char *s)
     truncate(new.head);
     i=length(new.head);
     new.length=i;
-
+    
     return new;
 } 
 
@@ -119,7 +119,7 @@ struct BigInteger sub(struct BigInteger a, struct BigInteger b)
             itr1=itr1->next;
         }
     }
-
+    truncate(new.head);
     return new;
 }
 
@@ -188,6 +188,7 @@ struct BigInteger add(struct BigInteger a, struct BigInteger b)
             new.length += 1;
         }
     }  
+    truncate(new.head);
     return new;
 }
 
@@ -328,7 +329,7 @@ struct BigInteger mul(struct BigInteger a,struct BigInteger b)
         itr4=itr4->next;
     }
     
-
+    truncate(pro.head);
     return pro;
 
 }
@@ -356,6 +357,7 @@ struct BigInteger div1(struct BigInteger a,struct BigInteger b)
         quo.head->data=0;
         quo.head->next=NULL;
         quo.length = 1;
+        truncate(quo.head);
         return quo;
     }
     int i=0,d,q=0;
@@ -419,7 +421,7 @@ struct BigInteger div1(struct BigInteger a,struct BigInteger b)
                 }
 
 
-              
+                truncate(quo.head);
                 return quo;
             }
         }
